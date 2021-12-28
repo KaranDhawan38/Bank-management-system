@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A0B5B44-BA32-4E12-918B-2F1909B05CD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ApteanEdgeBankApplication</RootNamespace>
+    <AssemblyName>ApteanEdgeBankApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApteanEdgeBankDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApteanEdgeBankDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ApteanEdgeBankDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApteanEdgeBankDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ApteanEdgeBankDataSet.xsc">
+      <DependentUpon>ApteanEdgeBankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ApteanEdgeBankDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ApteanEdgeBankDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ApteanEdgeBankDataSet.xss">
+      <DependentUpon>ApteanEdgeBankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ApteanEdgeBankDataSet1.xsc">
+      <DependentUpon>ApteanEdgeBankDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ApteanEdgeBankDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ApteanEdgeBankDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ApteanEdgeBankDataSet1.xss">
+      <DependentUpon>ApteanEdgeBankDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aptean-Logo-Full-Color-1024x270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Aptean-Logo-Full-Color-1024x270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\add_user_93401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\700797_delete_512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Deposit-PNG-File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Withdraw-PNG-Clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\eposit-PNG-File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\kisspng-deposit-account-bank-demand-deposit-currency-money-deposit-5b47e026a41ed8.9014504015314370946723.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\768px-Ic_add_circle_48px.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aptean.EdgeBank\Aptean.EdgeBank.csproj">
+      <Project>{bc86b528-2580-45b8-b0e4-99f823e04065}</Project>
+      <Name>Aptean.EdgeBank</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\aptean_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\getBalance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\database.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
